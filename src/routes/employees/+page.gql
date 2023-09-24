@@ -1,0 +1,21 @@
+query getEmployees {
+    employees @list( name: "All_Employees"){
+            id
+            firstName
+            middleName
+            lastName    
+            age
+            yearsOfExperience
+            contacts { 
+                id
+                contactNo
+                isPrimary
+            }
+            addresses {
+                id
+                address1
+                address2
+                isPrimary
+            }
+    }
+}

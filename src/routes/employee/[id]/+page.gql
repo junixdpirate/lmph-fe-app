@@ -1,0 +1,24 @@
+query getEmployee($id : ID!) {
+    employeeById(id : $id) {
+            id
+            firstName
+            middleName
+            lastName
+            birthdate
+            gender
+            maritalStatus
+            companyPosition
+            dateHired
+            contacts { 
+                id
+                contactNo
+                isPrimary
+            }
+            addresses {
+                id
+                address1
+                address2
+                isPrimary
+            }
+    }
+}
