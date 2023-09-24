@@ -1,6 +1,6 @@
-#LMPH Front-end Application
+# LMPH Front-end Application
 
-Front-end demo application using svelte as framework
+Front-end demo application using svelte as front-end framework
 
 ## Tech Stack
 - Svelte 4.0.5
@@ -9,10 +9,26 @@ Front-end demo application using svelte as framework
 - Flowbite Svelte (UI components)
 - Houdini (GraphQL Client)
 
+## Requirements
+
+- git
+- docker or docker desktop for Windows
+- node
+
+## Installation
+
+- clone the repository
+- run `npm install` to install dependencies.
 
 ## Developing
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+To successfully run this app, you need to run the backend server. Run first the dockerize backend server provided in the root folder:
+
+```bash
+docker-compose up -d
+```
+
+Once you run the backend server. start a development server:
 
 ```bash
 npm run dev
