@@ -1,13 +1,20 @@
-# LMPH Front-end Application
+# LMPH Front-end Demo Application
 
 Front-end demo application using svelte as front-end framework
 
 ## Tech Stack
+
+![Svelte](https://img.shields.io/badge/svelte-%23f1413d.svg?style=for-the-badge&logo=svelte&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![GraphQL](https://img.shields.io/badge/-GraphQL-E10098?style=for-the-badge&logo=graphql&logoColor=white)
+![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
+
 - Svelte 4.0.5
 - SvelteKit
 - Tailwind
 - Flowbite Svelte (UI components)
 - Houdini (GraphQL Client)
+- Vitetest (unit testing) 
 
 ## Requirements
 
@@ -17,7 +24,10 @@ Front-end demo application using svelte as front-end framework
 
 ## Installation
 
-- clone the repository
+clone the repository
+```bash
+git clone https://github.com/junixdpirate/lmph-fe-app.git .
+```
 - run `npm install` to install dependencies.
 
 ## Developing
