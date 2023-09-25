@@ -28,7 +28,15 @@ clone the repository
 ```bash
 git clone https://github.com/junixdpirate/lmph-fe-app.git .
 ```
-- run `npm install` to install dependencies.
+in root directory, create an environment file .env and .env.development and copy the ff variables to both .env and .env.development
+```
+VITE_GRAPHQL_API_URL="http://localhost:8080/graphql"
+```
+
+run `npm install` to install dependencies.
+```bash
+npm install
+```
 
 ## Developing
 
