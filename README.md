@@ -16,7 +16,8 @@ Front-end demo application using svelte as front-end framework
 - Tailwind
 - Flowbite Svelte (UI components)
 - Houdini (GraphQL Client)
-- Vitest (unit testing) 
+- Vitest (unit testing)
+- Playwright (Integration and end-to-end testing)
 
 ## Requirements
 
@@ -56,6 +57,23 @@ npm run dev
 # or start the server and open the app in a new browser tab
 npm run dev -- --open
 ```
+
+## Testing
+Vitest is use for unit testing. To run unit test:
+```bash
+npm run test
+```
+
+For integration or end-to-end testing. Run:
+```bash
+npx playwright test
+```
+
+To view result:
+```bash
+npx playwright show-report
+```
+you will view the result in http://localhost:9323/
 
 ## Building
 
