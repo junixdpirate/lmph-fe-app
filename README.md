@@ -16,7 +16,7 @@ Front-end demo application using svelte as front-end framework
 - Tailwind
 - Flowbite Svelte (UI components)
 - Houdini (GraphQL Client)
-- Vitetest (unit testing) 
+- Vitest (unit testing) 
 
 ## Requirements
 
