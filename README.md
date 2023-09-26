@@ -46,7 +46,7 @@ npm install
 To successfully run this app, you need to run the backend server. Run first the dockerize backend server provided in the root folder:
 
 ```bash
-docker-compose up -d
+docker-compose -f docker-compose-be-server.yml up -d
 ```
 
 Once you run the backend server. start a development server:
@@ -64,7 +64,13 @@ Vitest is use for unit testing. To run unit test:
 npm run test
 ```
 
-For integration or end-to-end testing. Run:
+For integration or end-to-end testing. 
+First you need to run the application. Run:
+```
+npm run dev
+```
+
+Then run playwrite test Run:
 ```bash
 npx playwright test
 ```
@@ -73,11 +79,11 @@ To view result:
 ```bash
 npx playwright show-report
 ```
-you will view the result in http://localhost:9323/
+you can view the result in http://localhost:9323/
 
 ## Building
 
-To create a production version of your app:
+To create a production version of the app:
 
 ```bash
 npm run build
@@ -86,3 +92,17 @@ npm run build
 You can preview the production build with `npm run preview`.
 
 > To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+
+
+## Run dockerize application
+
+Run the server docker image first
+```bash
+docker-compose -f docker-compose-be-server.yml up -d
+```
+
+Then run the Dockerfile
+```bash
+docker build -t lmph-fe-app .
+docker run lmph-fe-app
+```
