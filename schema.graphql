@@ -63,7 +63,14 @@ type Mutation {
   upsertEmployee(form: EmployeeForm): Employee
 }
 
+type PageableEmployee {
+  employees: [Employee]
+  id: ID
+  pageNumber: Int
+  totalPages: Int
+}
+
 type Query {
   employeeById(id: ID): Employee
-  employees: [Employee]
+  employees(page: String): PageableEmployee
 }

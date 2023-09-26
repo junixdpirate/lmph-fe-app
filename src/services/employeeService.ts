@@ -1,11 +1,19 @@
 import { graphql } from '$houdini';
 
 const deleteEmployee = (id : string) => {
+
+    return graphql(`mutation deleteEmployee($id: ID!) { 
+        deleteEmployee(id: $id) {
+            id
+        }
+    }`).mutate( { id : id });
+    /*
     return graphql(`mutation deleteEmployee($id: ID!) { 
                         deleteEmployee(id: $id) {
                             id @Employee_delete
                         }
                     }`).mutate( { id : id });
+                    */
 }
 
 const upsertEmployee = (employeeInfo : any) => {   

@@ -5,6 +5,7 @@ import { genders, maritalStatuses } from '../../enums';
 import ContactInfoInput from './ContactInfoInput.svelte';
 import AddressInfoInput from './AddressInfoInput.svelte';
 import { goto } from '$app/navigation';
+
 export let employeeInfo : any;
 
 let validationErrors : any = {}
@@ -51,14 +52,18 @@ const setPrimaryAddress = ( i : number ) => {
 
 const submitForm = async () => {
     const result = await upsertEmployee(employeeInfo);
-    result.errors ? setValidationErrors(result.errors) : goto('/employees');
+    result.errors ? setValidationErrors(result.errors) : gotoPage();
+}
+
+const gotoPage = () => {
+    document.location.href = '/employees';
 }
 
 const confirmDelete = () => popupModal = true;
 
 const proceedDelete = async () => {
     const result = await deleteEmployee( employeeInfo.id );
-    !result.fetching && goto('/employees');
+    !result.fetching && gotoPage(); //goto('/employees');
 }
 
 </script>

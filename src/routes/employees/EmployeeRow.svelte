@@ -27,7 +27,7 @@
 
 <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
     <td class="px-6 py-4 block text-center md:text-left md:table-cell">
-        {name}
+        #{employee.id} {name}
     </td>
     <td class="px-6 py-4 block text-center md:text-left md:table-cell">
         {addressInfo}
