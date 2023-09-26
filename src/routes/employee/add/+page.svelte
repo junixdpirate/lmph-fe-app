@@ -29,6 +29,8 @@
     ]
   }
 
+  const pageNumber = 0;
+
 </script>
 
-<Form {employeeInfo} />
+<Form {...{employeeInfo, pageNumber}} />

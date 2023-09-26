@@ -4,16 +4,9 @@ const deleteEmployee = (id : string) => {
 
     return graphql(`mutation deleteEmployee($id: ID!) { 
         deleteEmployee(id: $id) {
-            id
+            id @Employee_delete
         }
-    }`).mutate( { id : id });
-    /*
-    return graphql(`mutation deleteEmployee($id: ID!) { 
-                        deleteEmployee(id: $id) {
-                            id @Employee_delete
-                        }
-                    }`).mutate( { id : id });
-                    */
+    }`).mutate( { id : id });    
 }
 
 const upsertEmployee = (employeeInfo : any) => {   

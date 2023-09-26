@@ -7,6 +7,7 @@ import AddressInfoInput from './AddressInfoInput.svelte';
 import { goto } from '$app/navigation';
 
 export let employeeInfo : any;
+export let pageNumber : any;
 
 let validationErrors : any = {}
 let popupModal = false;
@@ -55,15 +56,15 @@ const submitForm = async () => {
     result.errors ? setValidationErrors(result.errors) : gotoPage();
 }
 
-const gotoPage = () => {
-    document.location.href = '/employees';
+const gotoPage = () => {    
+    goto('/employees?page=' + pageNumber); 
 }
 
 const confirmDelete = () => popupModal = true;
 
 const proceedDelete = async () => {
     const result = await deleteEmployee( employeeInfo.id );
-    !result.fetching && gotoPage(); //goto('/employees');
+    !result.fetching && gotoPage();
 }
 
 </script>
